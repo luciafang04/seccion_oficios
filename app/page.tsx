@@ -40,7 +40,7 @@ interface Oficio {
   fecha: string;
 }
 
-// Componente hijo para el diálogo de aceptar oferta
+// Componente hijo
 function AceptarDialog({ titulo }: { titulo: string }) {
   const [nombreLocal, setNombreLocal] = useState("");
   const [emailLocal, setEmailLocal] = useState("");
@@ -99,7 +99,7 @@ function AceptarDialog({ titulo }: { titulo: string }) {
   );
 }
 
-// Componente hijo para crear nueva oferta
+
 function NuevaOfertaDialog({ onSubmit }: { onSubmit: (oficio: any) => void }) {
   const [open, setOpen] = useState(false);
 
@@ -178,7 +178,7 @@ export default function LoginPage() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        {/* Header con breadcrumb */}
+
         <header className="flex h-16 shrink-0 items-center gap-2">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
@@ -202,19 +202,19 @@ export default function LoginPage() {
           </div>
         </header>
 
-        {/* Botón para crear nueva oferta */}
+
         <div className="flex justify-end p-4">
           <NuevaOfertaDialog onSubmit={handleNuevaOferta} />
         </div>
 
-        {/* Título general */}
+
         <h2 className="text-2xl font-bold px-4 font-title text-[#124d58]">
           Ofertas actuales
         </h2>
 
-        {/* Contenido principal */}
+
         <div className="flex flex-col gap-4 p-4">
-          {/* Grid de oficios */}
+
           <div className="grid gap-4 md:grid-cols-4">
             {oficios.map((oficio, index) => (
               <div key={index} className="bg-white shadow rounded-xl overflow-hidden transition-shadow duration-300 hover:shadow-[0_4px_20px_rgba(18,77,88,0.4)]">
@@ -225,7 +225,7 @@ export default function LoginPage() {
                   <p className="text-xs text-muted-foreground">Fecha: {oficio.fecha}</p>
                   <p className="text-sm font-bold font-title text-[#124d58]">{oficio.precio}</p>
 
-                  {/* Botón de aceptar */}
+                  {/* Botón */}
                   <AceptarDialog titulo={oficio.titulo} />
                 </div>
               </div>

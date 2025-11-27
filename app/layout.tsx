@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import { Montserrat, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
-// Montserrat para texto general
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
-// Libre Baskerville para títulos
+
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libre-baskerville",
   subsets: ["latin"],
-  weight: ["400", "700"], // normal y bold
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

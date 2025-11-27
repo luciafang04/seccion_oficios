@@ -11,7 +11,7 @@ interface LoginFormProps {
     curso: string;
     precio: string;
     fecha: string;
-    email: string; // ofertante
+    email: string;
   }) => void;
   className?: string;
 }
@@ -35,7 +35,6 @@ export function LoginForm({ className, onSubmit }: LoginFormProps) {
       email,
     });
 
-    // limpiar campos
     setTitulo("");
     setDesc("");
     setCurso("");
@@ -110,7 +109,6 @@ export function LoginForm({ className, onSubmit }: LoginFormProps) {
             </Field>
           </div>
 
-          {/* NUEVO CAMPO: EMAIL DEL OFERTANTE */}
           <Field>
             <FieldLabel htmlFor="email">Correo del ofertante</FieldLabel>
             <Input
