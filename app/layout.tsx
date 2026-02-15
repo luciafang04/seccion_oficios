@@ -1,19 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
-
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-});
-
-
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${libreBaskerville.variable}`}>
+    <html lang="en">
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
